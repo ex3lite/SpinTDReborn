@@ -1,11 +1,12 @@
 import { Events, Menu, LocalPlayer, GameState, EventsSDK, ImageData } from 'github.com/octarine-public/wrapper/index'
 
 const spinTDEntry = new Menu.AddEntry('SpinTD Reborn', ImageData.Icons.gold_large)
-spinTDEntry.AddShortDescription('Game not loaded','SpinTD Reborn features will appear when you enter the game')
+spinTDEntry.AddShortDescription('Game not loaded','0. SpinTD Reborn features will appear when you enter the game')
 let customGameNode: Menu.Node | null = null
 
 const is_closed = false;
-const buttonTest = spinTDEntry.AddButton('Change state', 'Change state description', 1)
+const buttonTestEntry = Menu.AddEntry('Change state', 'Change state description', 1)
+const buttonTest = buttonTestEntry.AddButton('Change state', 'Change state tooltip', 1)
 buttonTest.OnValue(() => {
     changeStateMenu(!is_closed)
 }
@@ -54,10 +55,10 @@ EventsSDK.on('GameEnded', () => {
 
 async function changeStateMenu(is_closed:boolean = false){
     if(is_closed){
-        new Menu.AddEntry('1.SpinTD Reborn', ImageData.Icons.gold_large)
+        new Menu.AddEntry('SpinTD Reborn', ImageData.Icons.gold_large)
         spinTDEntry.AddShortDescription('1.Game not loaded','SpinTD Reborn features will appear when you enter the game')
     } else {
-        new Menu.AddEntry('2.SpinTD Reborn', ImageData.Icons.gold_large)
+        new Menu.AddEntry('SpinTD Reborn', ImageData.Icons.gold_large)
         spinTDEntry.AddShortDescription('2.Game not loaded','SpinTD Reborn features will appear when you enter the game')
     }
 }
