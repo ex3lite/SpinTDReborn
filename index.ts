@@ -1,7 +1,8 @@
-import { Events, Menu, LocalPlayer, GameState, EventsSDK, ImageData } from 'github.com/octarine-public/wrapper/index'
+import { Events, Menu, LocalPlayer,PlayerData, PlayerTeamData, GameState, EventsSDK, ImageData } from 'github.com/octarine-public/wrapper/index'
 
 const customGamesEntry = Menu.AddEntry('Custom Games HAX', ImageData.Icons.icon_svg_keyboard)
-
+console.log(PlayerTeamData)
+console.log(PlayerData)
 let customGameNode: Menu.Node | null = null
 customGamesEntry.AddShortDescription('Supported Games', '', 0,ImageData.Icons.transfer_arrow_png)
 customGameNode = customGamesEntry.AddNode('SpinTD', ImageData.Icons.gold_large, 'Inject SpinTD features into the game')
