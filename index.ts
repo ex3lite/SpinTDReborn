@@ -1,6 +1,7 @@
 import { Events, Menu, LocalPlayer, GameState, EventsSDK, ImageData } from 'github.com/octarine-public/wrapper/index'
 
-const spinTDInjectEntry = Menu.AddEntry('SpinTD Inject 💫', ImageData.Icons.icon_analytics, tooltip='Inject SpinTD features into the game')
+const customGamesEntry = Menu.AddEntry('Custom Games2', ImageData.Icons.icon_analytics)
+
 let customGameNode: Menu.Node | null = null
 customGamesEntry.AddShortDescription('supported_games')
 
@@ -10,8 +11,7 @@ EventsSDK.on('GameStarted', () => {
             const spinTDInjectEntry = Menu.AddEntry('SpinTD Inject 💫', ImageData.Icons.icon_analytics, tooltip='Inject SpinTD features into the game')
 
             customGameNode = customGamesEntry.AddNode('custom_spintd')
-            const valuesPlayers = ["1", "2", "3", "4"]
-            customGameNode.AddDropdown("Select player", valuesPlayers, 0, "Select player to give gold")
+            #customGameNode.AddDropdown()
             const goldSlider = customGameNode.AddSlider('Gold amount', 0, 0, 500, 0, 'Amount of gold to give', 1)
             const giveGoldButton = customGameNode.AddButton('Give gold', 'Give gold to yourself', 1)
 
