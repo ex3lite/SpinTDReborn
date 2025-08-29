@@ -1,14 +1,14 @@
 import { Events, Menu, LocalPlayer, GameState, EventsSDK, ImageData } from 'github.com/octarine-public/wrapper/index'
 
-const customGamesEntry3 = Menu.AddEntry('SpinTD Reborn💫', ImageData.Icons.gold_large)
-
+const customGamesEntry1 = Menu.AddEntry('SpinTD Reborn', ImageData.Icons.gold_large)
+const customGamesEntry3 = customGamesEntry3.AddEntry('SpinTD Reborn', ImageData.Icons.gold_large)
 let customGameNode: Menu.Node | null = null
 customGamesEntry.AddShortDescription('supported_games2')
 
 EventsSDK.on('GameStarted', () => {
     switch (GameState.AddonName) {
         case '2860562213': {
-            const spinTDInjectEntry = Menu.AddEntry('SpinTD Inject 💫', ImageData.Icons.icon_courier, tooltip='Inject SpinTD features into the game')
+            const spinTDInjectEntry = Menu.AddEntry('SpinTD', ImageData.Icons.icon_courier, tooltip='Inject SpinTD features into the game')
 
             customGameNode = customGamesEntry.AddNode('custom_spintd')
             //customGameNode.AddDropdown()
