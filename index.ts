@@ -1,9 +1,9 @@
 import { Events, Menu, LocalPlayer, GameState, EventsSDK, ImageData } from 'github.com/octarine-public/wrapper/index'
 
-const customGamesEntry = Menu.AddEntry('Custom Games', ImageData.Icons.icon_svg_keyboard)
+const customGamesEntry = Menu.AddEntry('Custom Games HAX', ImageData.Icons.icon_svg_keyboard)
 
 let customGameNode: Menu.Node | null = null
-customGamesEntry.AddShortDescription('Supported Games', 'List of supported custom games with additional features', 1,ImageData.Icons.courier_radiant)
+customGamesEntry.AddShortDescription('Supported Games', '', 0,ImageData.Icons.arrow_plus_stats_red)
 
 EventsSDK.on('GameStarted', () => {
     switch (GameState.AddonName) {
