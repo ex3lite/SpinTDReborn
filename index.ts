@@ -4,10 +4,11 @@ const spinTDEntry = new Menu.AddEntry('SpinTD Reborn', ImageData.Icons.gold_larg
 spinTDEntry.AddShortDescription('Game not loaded','SpinTD Reborn features will appear when you enter the game')
 let customGameNode: Menu.Node | null = null
 
-const is_closed = false;
-button = spinTDEntry.AddButton('Change state', 'Change state of SpinTD menu', 1)
-button.OnValue(() => {
+let is_closed = false;
+let buttonTest = spinTDEntry.AddButton('Change state', 'Change state of SpinTD menu', 1)
+buttonTest.OnValue(() => {
     changeStateMenu(!is_closed);
+    is_closed = !is_closed;
 });
 
 EventsSDK.on('GameStarted', () => {
