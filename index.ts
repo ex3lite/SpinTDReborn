@@ -144,7 +144,6 @@ EventsSDK.on('GameStarted', () => {
                 })))
                 logging.info("Выдано золото: " + gold + " для игрока ID: " + LocalPlayer!.PlayerID)
             })
-
             const allowBuy = customGameNode.AddToggle('Debug Buy', false, 'Ability of giving items from store for free', 2)
 
             allowBuy.OnValue(() => {
@@ -169,17 +168,17 @@ EventsSDK.on('GameStarted', () => {
                 "item_phoenix_ash_custom",           // Phoenix+
                 "item_coins_of_duplicity_custom",    // Slark+
                 "item_ensnare_custom",               // Fish Fex+
-                "item_chakram_custom",               // Timbersaw
                 "item_void_clock_custom",            // Faceless Void+
                 "item_pelt_of_the_old_wolf_custom",  // Lycan+
-                "item_forbidden_fruit_custom",       // Treant Protector
                 "item_flicker_custom",               // Nyx+
                 "item_paw_of_undying_custom",        // Undying+
-                "item_smoke_dagger_custom",          // Dark Seer
-                "item_fragment_tower_light_custom",  // Silenser
                 "item_lost_soul_custom",             // Elder Titan+
                 "item_piece_stone_giant_custom",     // Tiny+
-                "item_amulet_night_custom",          // Night Stalker
+                "item_test_1_custom",
+                "item_test_2_custom",
+                "item_test_3_custom",
+                "item_test_4_custom",
+                "item_test_5_custom",
             ]
             const getBossItemsDropdown = customGameNode.AddDropdown("",bossItemsListArray);
             const getBossItemButton = customGameNode.AddButton("GIVE BOSS ITEM")
