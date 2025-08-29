@@ -56,6 +56,7 @@ async function changeStateMenu(is_closed:boolean = false){
     if(is_closed){
         let entry1 = new Menu.AddEntry('SpinTD Reborn', ImageData.Icons.gold_large)
         entry1.AddShortDescription('1.Game not loaded','SpinTD Reborn features will appear when you enter the game')
+        entry1.DELETE();
         let buttonTest = entry1.AddButton('Change state', 'Change state of SpinTD menu', 1)
         buttonTest.OnValue(() => {
             changeStateMenu(is_closed);
@@ -63,6 +64,7 @@ async function changeStateMenu(is_closed:boolean = false){
         });
     } else {
         let entry2 = new Menu.AddEntry('SpinTD Reborn', ImageData.Icons.gold_large)
+        entry2.DELETE();
         entry2.AddShortDescription('2.Game not loaded','SpinTD Reborn features will appear when you enter the game')
         let buttonTest = entry2.AddButton('Change state', 'Change state of SpinTD menu', 1)
         buttonTest.OnValue(() => {
