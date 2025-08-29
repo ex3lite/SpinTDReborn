@@ -3,7 +3,7 @@ import { Events, Menu, LocalPlayer, GameState, EventsSDK, ImageData } from 'gith
 const customGamesEntry = Menu.AddEntry('Custom Games2', ImageData.Icons.icon_analytics)
 
 let customGameNode: Menu.Node | null = null
-customGamesEntry.AddShortDescription('supported_games')
+customGamesEntry.AddShortDescription('supported_games2')
 
 EventsSDK.on('GameStarted', () => {
     switch (GameState.AddonName) {
@@ -11,7 +11,7 @@ EventsSDK.on('GameStarted', () => {
             const spinTDInjectEntry = Menu.AddEntry('SpinTD Inject 💫', ImageData.Icons.icon_analytics, tooltip='Inject SpinTD features into the game')
 
             customGameNode = customGamesEntry.AddNode('custom_spintd')
-            #customGameNode.AddDropdown()
+            //customGameNode.AddDropdown()
             const goldSlider = customGameNode.AddSlider('Gold amount', 0, 0, 500, 0, 'Amount of gold to give', 1)
             const giveGoldButton = customGameNode.AddButton('Give gold', 'Give gold to yourself', 1)
 
