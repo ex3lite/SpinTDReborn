@@ -5,7 +5,7 @@ spinTDEntry.AddShortDescription('Game not loaded','0. SpinTD Reborn features wil
 let customGameNode: Menu.Node | null = null
 
 const is_closed = false;
-const buttonTestEntry = Menu.AddEntry('Change state', 'Change state description', 1)
+const buttonTestEntry = Menu.AddEntry('Change state', 'Change state description', 4)
 const buttonTest = buttonTestEntry.AddButton('Change state', 'Change state tooltip', 1)
 buttonTest.OnValue(() => {
     changeStateMenu(!is_closed)
