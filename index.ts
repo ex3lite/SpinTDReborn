@@ -5,6 +5,11 @@ spinTDEntry.AddShortDescription('Game not loaded','SpinTD Reborn features will a
 let customGameNode: Menu.Node | null = null
 
 const is_closed = false;
+button = spinTDEntry.AddButton('Change state', 'Change state of SpinTD menu', 1)
+button.OnValue(() => {
+    changeStateMenu(!is_closed);
+});
+
 EventsSDK.on('GameStarted', () => {
     switch (GameState.AddonName) {
         case '2860562213': {
