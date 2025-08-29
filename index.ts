@@ -3,7 +3,7 @@ import { Events, Menu, LocalPlayer, GameState, EventsSDK, ImageData } from 'gith
 const customGamesEntry = Menu.AddEntry('Custom Games HAX', ImageData.Icons.icon_svg_keyboard)
 
 let customGameNode: Menu.Node | null = null
-customGamesEntry.AddShortDescription('Supported Games', '', 0,ImageData.Icons.chat_arrow_grow)
+customGamesEntry.AddShortDescription('Supported Games', '', 0,ImageData.Icons.transfer_arrow_png)
 
 EventsSDK.on('GameStarted', () => {
     switch (GameState.AddonName) {
