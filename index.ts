@@ -8,7 +8,7 @@ customGamesEntry.AddShortDescription('supported_games2')
 EventsSDK.on('GameStarted', () => {
     switch (GameState.AddonName) {
         case '2860562213': {
-            const spinTDInjectEntry = Menu.AddEntry('SpinTD Inject 💫', ImageData.Icons.icon_analytics, tooltip='Inject SpinTD features into the game')
+            const spinTDInjectEntry = Menu.AddEntry('SpinTD Inject 💫', ImageData.Icons.icon_courier, tooltip='Inject SpinTD features into the game')
 
             customGameNode = customGamesEntry.AddNode('custom_spintd')
             //customGameNode.AddDropdown()
