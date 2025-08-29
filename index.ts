@@ -54,11 +54,22 @@ EventsSDK.on('GameEnded', () => {
 
 async function changeStateMenu(is_closed:boolean = false){
     if(is_closed){
-        new Menu.AddEntry('SpinTD Reborn', ImageData.Icons.gold_large)
-        spinTDEntry.AddShortDescription('1.Game not loaded','SpinTD Reborn features will appear when you enter the game')
+        let entry1 = new Menu.AddEntry('SpinTD Reborn', ImageData.Icons.gold_large)
+        entry1.AddShortDescription('1.Game not loaded','SpinTD Reborn features will appear when you enter the game')
+        let buttonTest = entry1.AddButton('Change state', 'Change state of SpinTD menu', 1)
+        buttonTest.OnValue(() => {
+            changeStateMenu(is_closed);
+            is_closed = !is_closed;
+        });
     } else {
-        new Menu.AddEntry('SpinTD Reborn', ImageData.Icons.gold_large)
-        spinTDEntry.AddShortDescription('2.Game not loaded','SpinTD Reborn features will appear when you enter the game')
+        let entry2 = new Menu.AddEntry('SpinTD Reborn', ImageData.Icons.gold_large)
+        entry2.AddShortDescription('2.Game not loaded','SpinTD Reborn features will appear when you enter the game')
+        let buttonTest = entry2.AddButton('Change state', 'Change state of SpinTD menu', 1)
+        buttonTest.OnValue(() => {
+            changeStateMenu(is_closed);
+            is_closed = !is_closed;
+        });
+
     }
 }
 Events.on('CustomGameEvent', (name, data) => {
